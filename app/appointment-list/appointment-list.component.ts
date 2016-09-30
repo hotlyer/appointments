@@ -6,7 +6,7 @@ import { AppointmentService }    from './shared/appointment.service';
 @Component({
 	selector:    'hr-appointment-list',
 	exportAs:    'hrAppointmentList',
-	inputs:      [ 'titleClass', 'baseClass', 'appointmentClass', 'subjectClass' ],
+	inputs:      [ 'titleText', 'titleClass', 'baseClass', 'appointmentClass', 'subjectClass' ],
 	templateUrl: 'app/appointment-list/appointment-list.component.html',
 	styleUrls:   [ 'app/appointment-list/appointment-list.component.css' ],
 	providers:   [ AppointmentService ]
@@ -15,6 +15,7 @@ import { AppointmentService }    from './shared/appointment.service';
 export class AppointmentList implements OnInit {
 
 	// Inputs
+	public titleText: String;
 	public titleClass: String;
 	public baseClass: String;
 	public apmtClass: String;
